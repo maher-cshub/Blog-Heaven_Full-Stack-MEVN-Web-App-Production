@@ -26,11 +26,11 @@ mongoose.connect(process.env.DB_CONNECT,{
 .then(()=> {console.log('DB CONNECTED !')})
 .catch((err) => {console.log({err: err})})
 
-
+app.use(express.static("uploads"));
 
 app.use('/api',mainRouter);
 
-app.use(express.static("uploads"));
+
 //FOR DEPLOYEMENT
 //setting up routes
 
