@@ -28,7 +28,7 @@ mongoose.connect(process.env.DB_CONNECT,{
 
 
 
-app.use('/',mainRouter);
+app.use('/api',mainRouter);
 
 app.use(express.static("uploads"));
 //FOR DEPLOYEMENT
