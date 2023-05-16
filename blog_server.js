@@ -28,7 +28,7 @@ mongoose.connect(process.env.DB_CONNECT,{
 
 app.use(express.static("uploads"));
 
-app.use('/',mainRouter);
+app.use('/api',mainRouter);
 
 
 //FOR DEPLOYEMENT
@@ -45,7 +45,7 @@ app.use('/',mainRouter);
 
 
 app.use(express.static(__dirname + "/dist/"))
-app.get("*",(req,res) =>{
+app.get("/",(req,res) =>{
     res.sendFile(path.join(__dirname,"/dist/index.html"))
 })
 
