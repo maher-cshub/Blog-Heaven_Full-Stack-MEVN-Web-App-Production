@@ -1,0 +1,27 @@
+//installed packages
+
+1) npm i express mongoose multer cors dotenv
+
+//express for server and client requests and responds
+
+//mongoose for database
+
+//multer for file uploads
+
+// for allaowing server to comunicate with other servers
+
+//dotenv for variable environment to be protected
+
+2) npm i nodemon 
+
+//nodemon for auto start-stop server after each modification
+
+
+
+
+//package.js
+
+scripts
+    "start": "node blog_server.js",
+    "startdev": "nodemon blog_server.js"
+
