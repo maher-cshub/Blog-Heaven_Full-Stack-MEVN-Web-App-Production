@@ -26,29 +26,18 @@ mongoose.connect(process.env.DB_CONNECT,{
 .then(()=> {console.log('DB CONNECTED !')})
 .catch((err) => {console.log({err: err})})
 
-app.use(express.static("uploads"));
+
 
 app.use('/api',mainRouter);
 
 
-//FOR DEPLOYEMENT
-//setting up routes
+app.use(express.static("uploads"));
 
 
-//  FOR STATIC ELEMENTS
-
-
-// FOR NON STATIC APP ROUTES
-
-
-
-
-
-app.use(express.static(__dirname + "/dist/"))
+app.use(express.static(__dirname + "/public/"))
 app.get("/*",(req,res) =>{
-    res.sendFile(path.join(__dirname,"/dist/index.html"))
+    res.sendFile(path.join(__dirname,"/public/index.html"))
 })
-
 
 
 
